@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Our First Website</title>
+    <style>
+        body {
+            background-color: #ffb6c1;
+            font-family: Arial, sans-serif;
+            text-align: center;
+            padding: 50px;
+        }
+        h1 {
+            color: #e91e63;
+            font-size: 2em;
+        }
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            margin-top: 50px;
+        }
+        img {
+            width: 150px;
+            height: 150px;
+            border-radius: 10px;
+            animation: float 3s infinite alternate ease-in-out;
+        }
+        @keyframes float {
+            from { transform: translateY(0px); }
+            to { transform: translateY(-20px); }
+        }
+        input {
+            margin-top: 20px;
+            padding: 10px;
+            font-size: 1em;
+            border: none;
+            border-radius: 5px;
+        }
+        button {
+            margin-top: 10px;
+            padding: 10px 20px;
+            font-size: 1em;
+            background-color: #e91e63;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1>okie before we continue, What is our favorite app to jam together?</h1>
+    <div class="container">
+        <img src="sephi.jpg" alt="Floating Image 1">
+        <h2>🤔 lemme see 🤔</h2>
+        <img src="juliet.jpg" alt="Floating Image 2">
+    </div>
+    <input type="text" id="answer" placeholder="Type here...">
+    <button onclick="checkAnswer()">Submit</button>
+
+    <script>
+        function checkAnswer() {
+            let userInput = document.getElementById("answer").value.trim().toLowerCase();
+            if (userInput === "spotify") {
+                window.location.href = "correct.html";
+            } else {
+                alert("Nope! Try again. 😉");
+            }
+        }
+    </script>
+
+</body></html>
